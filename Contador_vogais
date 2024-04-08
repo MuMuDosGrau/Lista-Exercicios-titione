@@ -1,0 +1,4 @@
+frase = input('Digite uma frase: ')
+vogais = 'aeiouAEIOU'
+
+print(f'O numero de voigais é: {sum(1 for i in frase if i in vogais)}')
