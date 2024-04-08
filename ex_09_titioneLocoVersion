@@ -1,0 +1,2 @@
+numero = [int(n) for n in input('insira numeros separados por espaço: ').split()]
+print(f'O maior numeor é: {max(numero)}')
