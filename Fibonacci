@@ -1,0 +1,8 @@
+numero = int(input('Quantos numeros da sequencia de fibonacci você quer?: '))
+a, b = 1, 2
+print('sequencia de Fibonacci')
+
+for i in range(numero):
+    print(b, end="")
+    a, b = b, a + b
+print()
