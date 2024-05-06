@@ -1,0 +1,26 @@
+class Produto:
+    def __init__(self, nome, preco, qtd_estoque) :
+        self.nome = nome
+        self.preco = preco
+        self.qtd_estoque = qtd_estoque
+
+    def exibir_detalhe (self):
+        print(f'O produto {self.nome} custa R$ {self.preco}, e temos {self.qtd_estoque} no estoque.')
+
+    def atualizar_preco(self, novo_preco) :
+        self.preco = novo_preco
+        print('Preço atualizado com sucesso')
+        self.exibir_detalhe()
+
+    def vender_produto (self, quantidade_vendida) :
+        if quantidade_vendida >= self.qtd_estoque :
+            print("Quantidade vendida maior do que a quantidade em estoque")
+        else:
+            self.qtd_estoque -= quantidade_vendida
+            print("Venda realizada com sucesso!")
+
+notebook = Produto ('Acer Nitro' , 500.00, 25)
+notebook.exibir_detalhe()
+notebook.atualizar_preco(2500.00)
+notebook.vender_produto(1)
+notebook.exibir.detalhes()
