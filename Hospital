@@ -1,0 +1,16 @@
+class Paciente:
+    def __init__(self, nome, idade, problema_saude):
+        self.nome = nome
+        self.idade = idade
+        self.problema_saude = problema_saude
+
+    def exibir_perfil (self):
+        print(f'Nome : {self.nome}, idade: {self.idade}, problema : {self.problema_saude}')
+
+    def atualizar_problema (self, novo_problema):
+        self.problema_saude = f'{self.problema_saude} e {novo_problema}'
+
+paciente = Paciente('titione' , 169, 'Viciado em programar')
+paciente.exibir_perfil()
+paciente.atualizar_problema('gostar muito de dinheiro')
+paciente.exibir_perfil()
