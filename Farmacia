@@ -1,0 +1,16 @@
+class Medicamento:
+    def __init__(self, nome, preco, validade):
+        self.nome = nome
+        self.preco = preco
+        self.validade = validade
+
+    def exibir_informacoes(self):
+        print(f'nome: {self.nome}, preco : R${self.preco}, validade : {self.validade}')
+
+    def atualizar_preco(self, novo_preco):
+        self.preco = novo_preco
+    
+medicamento = Medicamento ('Dipirona' , 20.00 , '10/10/2024')
+medicamento.exibir_informacoes()
+medicamento.atualizar_preco(15.00)
+medicamento.exibir_informacoes()
