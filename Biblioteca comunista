@@ -1,0 +1,24 @@
+class Livro:
+    def __init__ (self, titulo, autor, numero_paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.numero_paginas = numero_paginas
+        self.status = False
+
+    def exibir_informacoes(self):
+        print(f'Livro : {self.titulo}, autor : {self.autor}, quantidade de paginas : {self.numero_paginas}')
+        if self.status:
+            print(f'Livro {self.titulo}: emprestado')
+        else:
+            print(f'Livro {self.titulo}: disponivel')
+
+    def atualizar_emprestimo(self):
+        if self.status:
+            self.status = False
+        else:
+            self.status = True
+
+livro = Livro('manifesto do partido comunista' , 'Karl Marx' , 100)
+livro.exibir_informacoes() 
+livro.atualizar_emprestimo()
+livro.exibir_informacoes()
